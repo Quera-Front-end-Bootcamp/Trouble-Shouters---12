@@ -5,8 +5,8 @@ export const Container = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 100vh;
-  @media (max-width: 768px) {
-    flex-direction: column;
+  @media (max-width: 480px) {
+    display: none;
   }
 `;
 export const LeftContainer = styled.div`
@@ -117,4 +117,51 @@ export const RightButton = styled.div`
   background-color: white;
   padding: 15px 20px;
   margin-top: 2rem;
+`;
+export const ContainerMobile = styled.div`
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 480px) {
+    display: flex;
+  }
+`;
+export const RightContainerMobile = styled.div``;
+export const RightBoxMobile = styled.div``;
+export const Box = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  /* background-color: red; */
+  background-color: ${(props) => props.inputColor || "palevioletred"};
+  margin-top: 30px;
+`;
+export const LeftContainerMobile = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+export const LeftTitleMobile = styled.div`
+  font-size: 30px;
+  font-weight: bold;
+  margin: 40px 0 15px 0;
+`;
+export const LeftDecMobile = styled.div`
+  text-align: center;
+  margin-bottom: 15px;
+`;
+export const LeftButtonMobile = styled.button`
+background-color: #004458;
+  color: white;
+  padding: 12px 16px;
+  width: 120px;
+  height: 40px;
+  border: none;
+  font-size: .8rem;
+  margin-bottom: 50px;
 `;
