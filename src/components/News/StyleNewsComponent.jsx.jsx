@@ -5,6 +5,10 @@ export const Container = styled.section`
   justify-content: space-between;
   width: 100%;
   height: 100vh;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const RightContainer = styled.div`
@@ -18,17 +22,41 @@ export const RightContainer = styled.div`
   border-bottom: 2px solid #d1d1d1;
   padding: 80px 60px;
   margin-bottom: 32vh;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    border-left: none;
+    padding: 80px 40px;
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: 768.99px) and (max-width: 992px) {
+    width: 45vw;
+  }
+
+  @media (min-width: 992px) and (max-width: 1200px) {
+    margin-bottom: 35vh;
+    padding: 70px 55px;
+  }
 `;
 export const RightHeadline = styled.h2`
   color: #004458;
   font-size: 2.5rem;
   font-family: "lalezar";
   padding-bottom: 1.5rem;
+
+  @media (max-width: 576px) {
+    font-size: 25px;
+  }
 `;
 export const RightText = styled.div`
   font-size: 1.4rem;
   font-family: "w-yekan";
   color: #7e7e7e;
+
+  @media (max-width: 576px) {
+    font-size: 20px;
+  }
 `;
 export const RightButton = styled.button`
   outline: none;
@@ -51,6 +79,15 @@ export const LeftContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    width: 100vw;
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: 768.99px) and (max-width: 992px) {
+    width: 55vw;
+  }
 `;
 
 export const LeftFigure = styled.figure`
@@ -63,6 +100,16 @@ export const LeftFigure = styled.figure`
 export const LeftImage = styled.img`
   width: 450px;
   height: 285px;
+
+  @media (max-width: 576px) {
+    width: 300px;
+    height: 225px;
+  }
+
+  @media (min-width: 768.99px) and (max-width: 992px) {
+    width: 385px;
+    height: 285px;
+  }
 `;
 export const LeftFigureCaption = styled.figcaption`
   width: 100%;
@@ -79,6 +126,10 @@ export const LeftFigureCaption = styled.figcaption`
 
 export const LeftText = styled.h3`
   color: #fff;
+
+  @media (max-width: 576px) {
+    font-size: 15px;
+  }
 `;
 
 export const LeftPagination = styled.div`
@@ -88,6 +139,10 @@ export const LeftPagination = styled.div`
   padding: 12px;
   border: 2px solid #088568;
   border-top: none;
+
+  @media (max-width: 576px) {
+    width: 250px;
+  }
 `;
 
 export const LeftButton = styled.img`
