@@ -1,10 +1,24 @@
 import styled from "styled-components";
+import image from "../../images/homePage/suggestionImage.png";
 
 export const Container = styled.section`
   height: 450px;
   background-color: #088568;
   display: flex;
 
+  @media (max-width: 576px) {
+    height: 250px;
+    margin-top: 100px;
+  }
+
+  @media (min-width: 576.99px) and (max-width: 768.99px) {
+    margin-top: 150px;
+    height: 250px;
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    height: 330px;
+  }
 `;
 
 export const SuggestionForm = styled.form`
@@ -14,6 +28,19 @@ export const SuggestionForm = styled.form`
   gap: 30px;
   margin: 0 auto;
 
+  @media (max-width: 768px) {
+    gap: 15px;
+  }
+`;
+
+export const StyleImg = styled.div`
+  width: 50vw;
+  height: 100%;
+  background-image: url(${image});
+  background-size: cover;
+  @media (max-width: 576px) {
+    width: 45vw;
+  }
 `;
 
 export const SuggestionHeadLine = styled.h2`
@@ -21,6 +48,9 @@ export const SuggestionHeadLine = styled.h2`
   font-family: "lalezar";
   color: #fff;
 
+  @media (max-width: 576px) {
+    font-size: 18px;
+  }
 `;
 
 export const SuggestionInput = styled.input`
@@ -42,6 +72,14 @@ export const SuggestionInput = styled.input`
     border-bottom: 2px solid #0cdbab;
   }
 
+  @media (max-width: 576px) {
+    width: 175px;
+    height: 30px;
+  }
+
+  @media (min-width: 576px) and (max-width: 768px) {
+    width: 250px;
+  }
 `;
 
 export const SuggestionButton = styled.button`
@@ -49,7 +87,6 @@ export const SuggestionButton = styled.button`
   outline: none;
   background-color: #004458;
   color: #fff;
-  cursor: pointer;
   font-size: 18px;
   font-family: "w-yekan";
   border: none;
@@ -57,4 +94,8 @@ export const SuggestionButton = styled.button`
   margin-right: auto;
   cursor: pointer;
 
+  @media (max-width: 576px) {
+    padding: 3px 18px;
+    font-size: 16px;
+  }
 `;

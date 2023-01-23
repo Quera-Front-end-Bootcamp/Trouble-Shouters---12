@@ -3,11 +3,13 @@ import styled from "styled-components";
 export const Container = styled.section`
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    justify-content: center;
+    gap: 100px;
   }
 `;
 
@@ -21,13 +23,13 @@ export const RightContainer = styled.div`
   border-left: 2px solid #d1d1d1;
   border-bottom: 2px solid #d1d1d1;
   padding: 80px 60px;
-  margin-bottom: 32vh;
+  margin-bottom: 180px;
 
   @media (max-width: 768px) {
     width: 100%;
     border-left: none;
     padding: 80px 40px;
-    margin-bottom: 75px;
+    margin-bottom: 0;
   }
 
   @media (min-width: 768.99px) and (max-width: 992px) {
@@ -82,7 +84,6 @@ export const LeftContainer = styled.div`
 
   @media (max-width: 768px) {
     width: 100vw;
-    margin-bottom: 75px;
   }
 
   @media (min-width: 768.99px) and (max-width: 992px) {
