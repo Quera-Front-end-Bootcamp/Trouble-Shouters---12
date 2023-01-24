@@ -8,11 +8,11 @@ export const Container = styled.section`
 
   @media (max-width: 576px) {
     height: 250px;
-    margin-top: 100px;
+    margin-top: 75px;
   }
 
   @media (min-width: 576.99px) and (max-width: 768.99px) {
-    margin-top: 150px;
+    margin-top: 75px;
     height: 250px;
   }
 

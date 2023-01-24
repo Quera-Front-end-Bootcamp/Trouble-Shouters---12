@@ -4,6 +4,19 @@ import Form from "../../components/Form/FormComponent";
 import Layout from "../../components/LoginLayout/LoginLayout";
 
 const Login = () => {
+  const formArr = [
+    {
+      name: "email",
+      type: "email",
+      placeholder: "ایمیل :",
+    },
+    {
+      name: "password",
+      type: "password",
+      placeholder: "رمزعبور :",
+    },
+  ];
+
   return (
     <StyleContainer flexDirection={"column"}>
       <Layout />
@@ -20,16 +33,3 @@ const Login = () => {
 };
 
 export default Login;
-
-const formArr = [
-  {
-    name: "email",
-    type: "email",
-    placeholder: "ایمیل :",
-  },
-  {
-    name: "password",
-    type: "password",
-    placeholder: "رمزعبور :",
-  },
-];

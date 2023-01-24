@@ -16,6 +16,8 @@ import youtube from "../../images/loginPage/youtube.png";
 import insatgram from "../../images/loginPage/instagram.png";
 
 const Layout = ({ imgUrl }) => {
+  const socialIcon = [youtube, whatsApp, telegram, insatgram];
+
   return (
     <Container imgUrl={imgUrl}>
       <HeadLineIcon src={secondBamboo} alt="bamboo" display={"none"} />
@@ -25,10 +27,9 @@ const Layout = ({ imgUrl }) => {
       </Headline>
       <Hr />
       <SocialIcons>
-        <SocialIcon src={youtube} alt="whatsApp" />
-        <SocialIcon src={whatsApp} alt="whatsApp" />
-        <SocialIcon src={telegram} alt="whatsApp" />
-        <SocialIcon src={insatgram} alt="whatsApp" />
+        {socialIcon.map((icon) => (
+          <SocialIcon src={icon} alt={icon} />
+        ))}
       </SocialIcons>
       <SocialIcons />
       <HomeIcon src={home} alt="home" />

@@ -4,7 +4,7 @@ import {
   SuggestionHeadLine,
   SuggestionInput,
   SuggestionButton,
-  StyleImg
+  StyleImg,
 } from "./StyleSuggestionComponent";
 
 import suggestionImage from "../../images/homePage/suggestionImage.png";
@@ -15,7 +15,10 @@ const Suggestion = () => {
       <StyleImg src={suggestionImage} alt="Suggestion Images" />
       <SuggestionForm>
         <SuggestionHeadLine>پیشنهاد و انتقاد</SuggestionHeadLine>
-        <SuggestionInput type="text" placeholder="ایمیل خود را وارد کنید ..." />
+        <SuggestionInput
+          type="email"
+          placeholder="ایمیل خود را وارد کنید ..."
+        />
         <SuggestionInput type="text" placeholder="متن خود را وارد کنید ..." />
         <SuggestionButton>ارسال</SuggestionButton>
       </SuggestionForm>
