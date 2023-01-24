@@ -13,7 +13,7 @@ export const StatisticsBackground = styled.div`
 
 export const MainStatistics = styled.div`
   position: absolute;
-  bottom: 0px;
+  bottom: -100%;
   width: 100vw;
 
   display: flex;
