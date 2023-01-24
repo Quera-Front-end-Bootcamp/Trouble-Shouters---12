@@ -28,10 +28,12 @@ export const UL = styled.ul`
     color: #fff;
   }
   @media (max-width: 768px) {
+    display: ${(props) =>
+      props.open ? "block" : "none"};
     margin: 0;
     flex-direction: column;
     background: #004458;
-    position: fixed;
+    position: absolute;
     transition: all 0.3 liner;
     transform: ${(props) =>
       props.open ? "translateX(0)" : "translateX(100%)"};
@@ -43,6 +45,9 @@ export const UL = styled.ul`
     li {
       color: #fff;
     }
+  }
+  @media (max-width: 576px){
+    /* display: none; */
   }
 `;
 export const Div = styled.div`

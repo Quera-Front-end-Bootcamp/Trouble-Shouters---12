@@ -1,8 +1,15 @@
 import React from "react";
 import { Border, Nav, UL, Div } from "./NavbarStyle";
 import bambo from "../../images/header/bambo.png";
+import { useState } from "react";
 
 const Navbar = ({ open }) => {
+  const [menu, setMenu] = useState([
+    "دوره ها",
+    " مقالات",
+    " خدمات",
+    "درباره ها",
+  ]);
   return (
     <>
       <Nav>
@@ -10,19 +17,14 @@ const Navbar = ({ open }) => {
           <img src={bambo} /> بامبو
         </a>
         <UL open={open}>
-          <li>
-            <a href="#">دوره ها</a>
-          </li>
-          <li>
-            <a href="#">مقالات</a>
-          </li>
-          <li>
-            <a href="#">خدمات</a>
-          </li>
-          <li>
-            <a href="#">درباره ما</a>
-          </li>
+          {menu.map((menu) => (
+            <li>
+              {" "}
+              <a href="#">{menu}</a>
+            </li>
+          ))}
         </UL>
+
         <Div>
           <div>
             <a className="enter">ورود</a>

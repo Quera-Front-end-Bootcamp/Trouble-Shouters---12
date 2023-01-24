@@ -6,8 +6,8 @@ import FooterComponents from "../../components/Footer/FooterComponents";
 function HomePage() {
   return <>
   <Header/>
-  <CoursesComponent/>
-  <FooterComponents/>
+  {/* <CoursesComponent/>
+  <FooterComponents/> */}
   </>;
 }
 

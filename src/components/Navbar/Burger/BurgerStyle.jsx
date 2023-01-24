@@ -1,5 +1,11 @@
 import styled from "styled-components";
+export const NavbarComponent = styled.div`
+  @media (max-width: 768px){
+    display: flex;
+    align-items: center;
+  }
 
+`
 export const Div = styled.div`
   width: 2rem;
   height: 2rem;
@@ -8,8 +14,9 @@ export const Div = styled.div`
   left: 30px;
   z-index: 20;
   display: none;
-  curser: pointer;
+  cursor: pointer;
   @media (max-width: 768px) {
+    position: absolute;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
