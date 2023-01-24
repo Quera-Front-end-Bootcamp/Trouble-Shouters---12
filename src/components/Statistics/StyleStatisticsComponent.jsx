@@ -12,9 +12,12 @@ export const StatisticsBackground = styled.div`
 `;
 
 export const MainStatistics = styled.div`
+    margin: 5px 0px;
   position: absolute;
   bottom: 0px;
-  width: 100vw;
+  bottom: -100%;
+  width: 100%;
+
 
   display: flex;
   justify-content: space-around;
