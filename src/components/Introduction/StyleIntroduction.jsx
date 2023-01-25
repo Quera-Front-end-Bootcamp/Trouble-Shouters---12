@@ -63,7 +63,7 @@ export const Consultation = styled.div`
 
 export const Certification = styled.div`
   margin: 0px;
-  background-image: linear-gradient(to left, #004458, #08a987);
+  background-image: linear-gradient(to right, #004458, #08a987);
   display: flex;
   align-items: center;
   justify-content: flex-start;
