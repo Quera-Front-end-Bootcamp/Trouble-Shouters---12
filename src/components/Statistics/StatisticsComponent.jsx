@@ -13,8 +13,7 @@ const Statistics = () => {
     <>
       <StatisticsBackground>
         <img src={Banner} />
-      </StatisticsBackground>
-      <MainStatistics>
+        <MainStatistics>
         <div>
           <img src={HatIcon} alt="" srcset="" />
           <h2>576 دانشجو</h2>
@@ -40,6 +39,8 @@ const Statistics = () => {
           </p>
         </div>
       </MainStatistics>
+      </StatisticsBackground>
+
     </>
   );
 };
