@@ -14,14 +14,8 @@ export const StatisticsBackground = styled.div`
 export const MainStatistics = styled.div`
   margin: 5px 0px;
   position: absolute;
-<<<<<<< AmirMGhaderi
   bottom: -100vh;
   width: 100%;
-=======
-  bottom: -100%;
-  width: 100vw;
-
->>>>>>> main
   display: flex;
   justify-content: space-around;
   color: #fff;
