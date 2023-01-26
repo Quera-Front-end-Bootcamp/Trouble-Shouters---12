@@ -2,8 +2,27 @@ import React from "react";
 import { StyleContainer } from "../../components/LoginContainer/StyleLoginContainer";
 import Form from "../../components/Form/FormComponent";
 import Layout from "../../components/LoginLayout/LoginLayout";
+import registerImage from "../../images/loginPage/Register.png";
+import axios from "axios";
 
 const Register = () => {
+  const url = "https://63d14f753f08e4a8ff952f49.mockapi.io/users";
+
+  const onSubmitHandler = (form, reset) => {
+    axios({
+      method: "post",
+      url: url,
+      data: form,
+    })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    reset();
+  };
+
   const formArr = [
     {
       name: "username",
@@ -46,8 +65,9 @@ const Register = () => {
         secondColor={"#fff"}
         flexDirection={"row-reverse"}
         login={false}
+        onSubmit={onSubmitHandler}
       />
-      <Layout />
+      <Layout imgUrl={registerImage} />
     </StyleContainer>
   );
 };

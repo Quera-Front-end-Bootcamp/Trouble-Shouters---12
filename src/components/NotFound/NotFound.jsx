@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+import { ROUTE_HOME_PAGE } from "../../Routes/Routes";
 import {
   Container,
   NotFoundHeader,
@@ -6,11 +8,16 @@ import {
 } from "./StyleNotFound";
 
 const NotFound = () => {
+  const naviagte = useNavigate();
+  const handleRedirect = () => {
+    naviagte(ROUTE_HOME_PAGE);
+  };
+
   return (
     <Container>
       <NotFoundHeader>404</NotFoundHeader>
       <NotFoundGif></NotFoundGif>
-      <NotFoundButton>صفحه اصلی</NotFoundButton>
+      <NotFoundButton onClick={handleRedirect}>صفحه اصلی</NotFoundButton>
     </Container>
   );
 };

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import notFoundGif from "../../images/NotFoundPage/404.gif";
 
 export const Container = styled.section`
-  height: 100vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,7 @@ export const Container = styled.section`
 export const NotFoundHeader = styled.header`
   color: #004458;
   font-family: "lalezar";
-  font-size: 130px;
+  font-size: 150px;
 `;
 export const NotFoundGif = styled.div`
   background: url(${notFoundGif}) no-repeat center;

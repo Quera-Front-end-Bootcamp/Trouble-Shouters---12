@@ -4,7 +4,8 @@ import loginImage from "../../images/loginPage/login.png";
 export const Container = styled.section`
   height: 100vh;
   width: 65vw;
-  background-image: url(${loginImage});
+  /* background-image: url(${loginImage}); */
+  background-image: url(${(props) => props.imgUrl});
   background-size: cover;
   position: relative;
   display: flex;

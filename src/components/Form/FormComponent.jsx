@@ -14,6 +14,14 @@ import {
 } from "./StyleFormComponent";
 
 import home from "../../images/loginPage/BlueHomeIcon.png";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { ROUTE_REGISTER_PAGE } from "../../Routes/Routes";
+import { ROUTE_LOGIN_PAGE } from "../../Routes/Routes";
+
+const prepareForm = (formArr) => {
+  return formArr.reduce((r, v) => ({ ...r, [v.name]: "" }), {});
+};
 
 const Form = ({
   title,
@@ -22,7 +30,18 @@ const Form = ({
   secondColor,
   login,
   flexDirection,
+  onSubmit,
 }) => {
+  const initialForm = prepareForm(formArr);
+  const [form, setForm] = useState(initialForm);
+  const navigate = useNavigate();
+
+  const onChangeHandler = (e) => {
+    setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
+  };
+
+  const onSumbitHandler = () => onSubmit(form, () => setForm(initialForm));
+
   return (
     <FormContainer>
       <FormHeadLine>
@@ -35,8 +54,9 @@ const Form = ({
             id={name}
             name={name}
             type={type}
-            // value={}
             placeholder={placeholder}
+            value={form[name]}
+            onChange={(e) => onChangeHandler(e)}
           />
         </FormControl>
       ))}
@@ -51,10 +71,33 @@ const Form = ({
         </SecondContainer>
       )}
       <ButtonContainer flexDirection={flexDirection}>
-        <StyleButton bc={firstColor} fc={secondColor}>
+        <StyleButton
+          onS
+          bc={firstColor}
+          fc={secondColor}
+          onClick={(e) => {
+            e.preventDefault();
+            if (login) {
+              navigate(ROUTE_REGISTER_PAGE);
+              return;
+            }
+            onSumbitHandler();
+          }}
+        >
           ثبت نام
         </StyleButton>
-        <StyleButton bc={secondColor} fc={firstColor}>
+        <StyleButton
+          bc={secondColor}
+          fc={firstColor}
+          onClick={(e) => {
+            e.preventDefault();
+            if (!login) {
+              navigate(ROUTE_LOGIN_PAGE);
+              return;
+            }
+            onSumbitHandler();
+          }}
+        >
           ورود
         </StyleButton>
       </ButtonContainer>
@@ -65,7 +108,6 @@ export default Form;
 
 Form.defaultProps = {
   title: "ورود کاربر",
-  forget: false,
   formArr: [
     {
       name: "email",
