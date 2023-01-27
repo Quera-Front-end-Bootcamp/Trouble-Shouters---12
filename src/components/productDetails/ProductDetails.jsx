@@ -81,6 +81,10 @@ const Lines = styled.div`
 const Title = styled.div`
   color: var(--main-color);
 `;
+const TitleCross= styled.div`
+  color: var(--main-color);
+  text-decoration: line-through;
+`
 
 const ProductDetails = () => {
   return (
@@ -113,7 +117,7 @@ const ProductDetails = () => {
         <LeftDet>
           <LeftDetTitle>دوره جاوا اسکریپت</LeftDetTitle>
           <LeftDetPrice>
-            <Title> قیمت دوره:</Title>200.000 تومان
+            <Title> قیمت دوره:</Title><TitleCross>200.000 تومان</TitleCross>
           </LeftDetPrice>
           <LeftDetDiscount>
             <Title> تخفیف:</Title>10 %
