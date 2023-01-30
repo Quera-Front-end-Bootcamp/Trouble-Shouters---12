@@ -72,7 +72,6 @@ const Form = ({
       )}
       <ButtonContainer flexDirection={flexDirection}>
         <StyleButton
-          onS
           bc={firstColor}
           fc={secondColor}
           onClick={(e) => {

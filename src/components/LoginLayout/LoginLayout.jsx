@@ -27,8 +27,8 @@ const Layout = ({ imgUrl }) => {
       </Headline>
       <Hr />
       <SocialIcons>
-        {socialIcon.map((icon) => (
-          <SocialIcon src={icon} alt={icon} />
+        {socialIcon.map((icon, index) => (
+          <SocialIcon src={icon} alt={icon} key={index} />
         ))}
       </SocialIcons>
       <SocialIcons />

@@ -10,7 +10,7 @@ function HomePage() {
       {/* <CoursesComponent /> */}
       <News />
       <Suggestion />
-      <FooterComponents />
+      {/* <FooterComponents /> */}
     </>
   );
 }
