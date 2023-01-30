@@ -152,8 +152,9 @@ export const LeftTitleMobile = styled.div`
   margin: 40px 0 15px 0;
 `;
 export const LeftDecMobile = styled.div`
-  text-align: center;
+  text-align: justify;
   margin-bottom: 15px;
+  padding: 10px 30px;
 `;
 export const LeftButtonMobile = styled.button`
 background-color: #004458;

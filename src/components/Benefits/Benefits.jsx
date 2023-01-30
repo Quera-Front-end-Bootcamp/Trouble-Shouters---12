@@ -11,6 +11,7 @@ const Container = styled.div`
   position: relative;
   color: var(--main-color);
   background-color: #f9f9f9;
+ 
 `;
 const RightPic = styled.div`
   background-image: url(${benefits});
@@ -23,6 +24,12 @@ const RightPic = styled.div`
 const Des = styled.div`
   margin-bottom: 45px;
   display: flex;
+  @media (max-width: 480px) {
+    max-height: 8vh;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+  }
 `;
 const All = styled.div`
   display: flex;

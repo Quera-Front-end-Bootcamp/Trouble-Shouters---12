@@ -25,3 +25,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@font-face {
+  font-family: lalezar;
+  src: url(../Fonts/Lalezar-Regular.ttf);
+}
+
+@font-face {
+  font-family: w-yekan;
+  src: url(../Fonts/W_yekan_YasDL.com.ttf);
+}
+

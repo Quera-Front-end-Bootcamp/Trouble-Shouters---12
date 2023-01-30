@@ -8,6 +8,10 @@ const Container = styled.div`
   gap: 6rem;
   position: relative;
   color: var(--main-color);
+  @media (max-width: 480px) {
+    flex-direction: column;
+    height: 120vh;
+  }
 `;
 const RightDet = styled.div`
   width: 60%;
@@ -19,6 +23,12 @@ const RightDetTitle = styled.div`
 `;
 const RightDetDec = styled.div`
   text-align: justify;
+  @media (max-width: 480px) {
+    max-height: 40vh;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+  }
 `;
 const LeftDet = styled.div`
   display: flex;
@@ -66,7 +76,7 @@ const LeftDetButton = styled.button`
   background-color: #09b28b;
   color: white;
   border: none;
-  padding: 12px 20px ;
+  padding: 12px 20px;
   cursor: pointer;
   font-size: 16px;
 `;
@@ -77,9 +87,16 @@ const Lines = styled.div`
   border: 3px solid #dbdbdb;
   top: 0;
   left: 0;
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
 const Title = styled.div`
   color: var(--main-color);
+`;
+const TitleCross = styled.div`
+  color: var(--main-color);
+  text-decoration: line-through;
 `;
 
 const ProductDetails = () => {
@@ -113,7 +130,8 @@ const ProductDetails = () => {
         <LeftDet>
           <LeftDetTitle>دوره جاوا اسکریپت</LeftDetTitle>
           <LeftDetPrice>
-            <Title> قیمت دوره:</Title>200.000 تومان
+            <Title> قیمت دوره:</Title>
+            <TitleCross>200.000 تومان </TitleCross>
           </LeftDetPrice>
           <LeftDetDiscount>
             <Title> تخفیف:</Title>10 %
