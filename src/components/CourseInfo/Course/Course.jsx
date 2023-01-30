@@ -7,7 +7,7 @@ import {
   CourseImg,
   Border,
 } from "./CourseStyle";
-// import Js from "../../images/js.png";
+
 
 const Course = ({ id, title, image, progress }) => {
   return (
