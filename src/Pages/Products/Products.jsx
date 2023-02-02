@@ -5,7 +5,7 @@ import TrainingCourses from "../../components/Training Courses/TrainingCourses"
 const Products = () => {
   return (
     <>
-    <TrainingCourses/>
+    {/* <TrainingCourses/> */}
     <FooterComponents/>
     </>
   )
