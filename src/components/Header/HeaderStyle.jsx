@@ -37,7 +37,7 @@ export const Section = styled.div`
   .title {
     h2 {
       font-size: 2.3rem;
-      font-weight:bold;
+      font-weight: bold;
       padding: 5px 35px;
     }
   }
@@ -60,7 +60,12 @@ export const Section = styled.div`
     height: 70px;
     font-size: 1.1rem;
     cursor: pointer;
+    .linkButton {
+      text-decoration: none;
+      color: #004458;
+    }
   }
+
   @media (max-width: 992px) {
     .title {
       h2 {
@@ -100,7 +105,7 @@ export const Section = styled.div`
     .title {
       h2 {
         font-size: 1.4rem;
-        text-align:center
+        text-align: center;
       }
     }
     .info {
