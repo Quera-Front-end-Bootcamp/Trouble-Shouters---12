@@ -41,8 +41,8 @@ export const RightContainer = styled.div`
 export const RightHeadline = styled.h2`
   color: #004458;
   font-size: 2.5rem;
-  font-family: "lalezar";
   padding-bottom: 1.5rem;
+  font-weight: normal;
 
   @media (max-width: 576px) {
     font-size: 25px;
@@ -50,7 +50,6 @@ export const RightHeadline = styled.h2`
 `;
 export const RightText = styled.div`
   font-size: 1.4rem;
-  font-family: "w-yekan";
   color: #7e7e7e;
 
   @media (max-width: 576px) {
@@ -69,15 +68,20 @@ export const RightButton = styled.button`
   left: 8vw;
   border: none;
   font-size: 1.1rem;
-  font-family: "w-yekan";
 `;
 
 export const LeftContainer = styled.div`
   width: 60vw;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  .newsSwiper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
   @media (max-width: 768px) {
     width: 100vw;
@@ -110,7 +114,7 @@ export const LeftImage = styled.img`
   }
 `;
 export const LeftFigureCaption = styled.figcaption`
-  width: 100%;
+  width: 450px;
   height: 60px;
   position: absolute;
   bottom: 0;
@@ -119,14 +123,22 @@ export const LeftFigureCaption = styled.figcaption`
   opacity: 85%;
   font-size: 16px;
   text-align: center;
-  font-family: "w-yekan";
+
+  @media (max-width: 576px) {
+    width: 300px;
+  }
+
+  @media (min-width: 768.99px) and (max-width: 992px) {
+    width: 385px;
+  }
 `;
 
 export const LeftText = styled.h3`
   color: #fff;
+  font-size: 17px;
 
   @media (max-width: 576px) {
-    font-size: 15px;
+    font-size: 14px;
   }
 `;
 

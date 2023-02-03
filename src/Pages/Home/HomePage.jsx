@@ -12,6 +12,7 @@ import TrainingCourses from "../../components/Training Courses/TrainingCourses";
 
 
 function HomePage() {
+
   return <>
   <Header/>
   <Statistics/>
