@@ -45,7 +45,6 @@ export const StyleImg = styled.div`
 
 export const SuggestionHeadLine = styled.h2`
   font-size: 2rem;
-  font-family: "lalezar";
   color: #fff;
 
   @media (max-width: 576px) {
@@ -62,7 +61,6 @@ export const SuggestionInput = styled.input`
   padding: 10px;
   padding-right: 16px;
   color: #fff;
-  font-family: "w-yekan";
   font-size: 16px;
 
   &::placeholder {
@@ -88,7 +86,6 @@ export const SuggestionButton = styled.button`
   background-color: #004458;
   color: #fff;
   font-size: 18px;
-  font-family: "w-yekan";
   border: none;
   margin-left: 0;
   margin-right: auto;
