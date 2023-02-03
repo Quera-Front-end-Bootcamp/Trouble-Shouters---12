@@ -3,6 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import styled from "styled-components";
+import './active.css'
 
 const AllContainer = styled.div`
   display: flex;
@@ -20,7 +21,7 @@ const ModalContainer = styled.div`
   flex-direction: column;
   /* justify-content: space-between; */
   background-color: #fff;
-  height: 50vh;
+  height: 63vh;
   width: 40vw;
   padding: 30px 40px;
 `;
@@ -77,6 +78,7 @@ const Button = styled.div`
   align-items: center;
   width: 100%;
   border-top: 2px solid #dbdbdb;
+  gap: 1rem;
   button {
     background-color: #dbdbdb;
     border: none;
@@ -91,6 +93,10 @@ const Button = styled.div`
 
 const Modal = ({ id }) => {
   const [data, setData] = useState([]);
+  const [isClose,setClose]=useState(false)
+  const closeHandler=()=>{
+    setClose(true)
+  }
 
   useEffect(() => {
     axios
@@ -101,7 +107,7 @@ const Modal = ({ id }) => {
       });
   }, []);
   return (
-    <AllContainer>
+    <AllContainer className={isClose?'close':''}>
       <ModalContainer>
         <Flex>
           <Container>
@@ -128,6 +134,8 @@ const Modal = ({ id }) => {
         <Button>
           {" "}
           <button>مشاهده کامل</button>
+          <button onClick={closeHandler}>بستن</button>
+
         </Button>
       </ModalContainer>
     </AllContainer>

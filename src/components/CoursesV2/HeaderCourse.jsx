@@ -5,12 +5,12 @@ import grid from '../../images/CoursesV2/Grid.png';
 import Search from "../Header/Search/Search";
 
 const Container = styled.div`
-height: 14.5vh;
+height: 130px;
 background-image: url(${grid});
 
 `;
 const Gap = styled.div`
-height: 4vh;
+height: 30px;
 background-image: url(${grid});
 
 `;
