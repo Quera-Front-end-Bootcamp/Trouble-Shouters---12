@@ -15,11 +15,20 @@ export const ContainerFirst = styled.div`
   margin: 60px;
   margin-top: 40px;
   padding-bottom: 60px;
+  @media (max-width: 480px) {
+    flex-direction: column;
+    padding: 0;
+    padding-bottom: 10px;
+  }
 `;
 export const AboutUs = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+  @media (max-width: 480px) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 `;
 export const AboutUsTitle = styled.div`
   font-size: 1.5rem;
@@ -33,6 +42,14 @@ export const NewsTeller = styled.div`
   display: flex;
   flex-direction: column;
   margin-right: 100px;
+  @media (max-width: 480px) {
+    width: 100%;
+    margin-bottom: 30px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 0;
+
+  }
 `;
 export const NewsTellerTitle = styled.div`
   font-size: 1.5rem;
@@ -58,6 +75,9 @@ export const NewsTellerInput = styled.input`
   :-ms-input-placeholder {
     color: #415d65;
   }
+  @media (max-width: 480px) {
+    padding: 0 20px 0 20px;
+  }
 `;
 export const NewsTellerButton = styled.button`
   outline: none;
@@ -75,10 +95,16 @@ export const ContainerSecond = styled.div`
   display: flex;
   justify-content: space-between;
   padding-bottom: 60px;
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 export const ContactUs = styled.div`
   display: flex;
   flex-direction: column;
+  @media (max-width: 480px) {
+      margin-bottom: 1rem;
+  }
 `;
 export const ContactUsTitle = styled.div`
   font-size: 1.5rem;
@@ -93,7 +119,11 @@ export const ContactUsIcon = styled.div`
   cursor: pointer;
   color: #dbdbdb;
 `;
-export const ComeWithUS = styled.div``;
+export const ComeWithUS = styled.div`
+  @media (max-width: 480px) {
+      margin-bottom: 1rem;
+  }
+`;
 export const ComeWithUSTitle = styled.div`
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -122,4 +152,8 @@ export const ContainerThird = styled.div`
   align-items: center;
   background-color: #003544;
   height: 70px;
+  @media (max-width: 480px) {
+    font-size: 12px;
+    text-align: center;
+  }
 `;
