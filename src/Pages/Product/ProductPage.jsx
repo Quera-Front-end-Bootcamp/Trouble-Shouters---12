@@ -11,21 +11,20 @@ const baseURL = "https://63d911df74f386d4efe3ee3d.mockapi.io/products";
 
 
 const ProductPage = () => {
+  const { productId } = useParams();
+  const [data, setData] = useState([]);
 
-  // const [products, setProducts] = useState(null);
-  // useEffect(() => {
-  //   axios.get(baseURL).then((response) => {
-  //     setProducts(response.data);
-  //   });
-  // }, []);
+  useEffect(() => {
+    axios
+      .get(`https://63ba74b04482143a3f27f44a.mockapi.io/users/${productId}`)
+      .then((response) => {
+        setData(response.data);
+      });
+  }, []);
 
-
-  // const {productId} = useParams()
-  // const thisProduct = products.find(prod => prod.id === productId)
-  // console.log(thisProduct);
   return (
     <>
-    <DesProduct/>
+    <DesProduct percent={data.percent*10} endDate={data.endDate} startDate={data.startDate} name={data.name} teacher={data.teacher}/>
     <ProductDetails/>
     <Benefits/>
     <FooterComponents/>

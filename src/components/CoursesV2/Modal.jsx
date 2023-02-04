@@ -2,8 +2,9 @@ import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import './active.css'
+import "./active.css";
 
 const AllContainer = styled.div`
   display: flex;
@@ -43,9 +44,9 @@ const Option = styled.div`
   display: flex;
   align-items: center;
 `;
-const OptionMargin=styled(Option)`
+const OptionMargin = styled(Option)`
   margin-bottom: 20px;
-`
+`;
 const Price = styled.div``;
 const Progress = styled.div`
   position: relative;
@@ -87,16 +88,15 @@ const Button = styled.div`
     margin-top: 20px;
     color: var(--main-color);
     font-size: 14px;
-    
   }
 `;
 
 const Modal = ({ id }) => {
   const [data, setData] = useState([]);
-  const [isClose,setClose]=useState(false)
-  const closeHandler=()=>{
-    setClose(true)
-  }
+  const [isClose, setClose] = useState(false);
+  const closeHandler = () => {
+    setClose(true);
+  };
 
   useEffect(() => {
     axios
@@ -107,7 +107,7 @@ const Modal = ({ id }) => {
       });
   }, []);
   return (
-    <AllContainer className={isClose?'close':''}>
+    <AllContainer className={isClose ? "close" : ""}>
       <ModalContainer>
         <Flex>
           <Container>
@@ -132,10 +132,10 @@ const Modal = ({ id }) => {
           </Progress>
         </OptionMargin>
         <Button>
-          {" "}
-          <button>مشاهده کامل</button>
+          <Link to={`/products/${data.id}`}>
+            <button>مشاهده کامل</button>
+          </Link>
           <button onClick={closeHandler}>بستن</button>
-
         </Button>
       </ModalContainer>
     </AllContainer>

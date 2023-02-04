@@ -68,7 +68,7 @@ export const Number = styled.div`
   }
 `;
 export const ProgressBar = styled.div`
-  background-color: #dbdbdb;
+  background-color: rgb(144, 144, 144,.7);
   height: 40px;
   width: 300px;
   color: black;
@@ -76,6 +76,20 @@ export const ProgressBar = styled.div`
   justify-content: flex-end;
   align-items: center;
   padding-left: 20px;
+  position: relative;
+`;
+export const Progresser = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: ${({ percent }) => percent}%;
+  background-color: #DBDBDB;
+  text-align: left;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 10px;
 `;
 export const Boxes = styled.div`
   display: flex;
@@ -117,7 +131,7 @@ export const Line = styled.div`
   }
 `;
 
-const DesProduct = () => {
+const DesProduct = ({name,teacher,startDate,endDate,percent}) => {
   return (
     <>
       <HeaderMain>
@@ -125,23 +139,25 @@ const DesProduct = () => {
         <Container>
           <Details>
             <Logo src={js} />
-            <Title>دوره جاوا اسکریپت</Title>
+            <Title>{name}</Title>
             <Numbers>
-              <All>ظرفیت : 59 نفر</All>
+              <All>ظرفیت : 60 نفر</All>
               <Number>دانشجو : 53 نفر</Number>
             </Numbers>
-            <ProgressBar>50%</ProgressBar>
+            <ProgressBar>
+              <Progresser percent={percent}>{percent}%</Progresser>
+            </ProgressBar>
           </Details>
           <Boxes>
             <Box>
               <img src={teacher} alt="" />
               <Line>: مدرس</Line>
-              <Line>دکتر بحر العلومی</Line>
+              <Line>{teacher}</Line>
             </Box>
             <Box>
               <img src={calendar} alt="" />
-              <Line>تاریخ شروع : 1401/1/1</Line>
-              <Line>تاریخ پایان : 1402/1/1</Line>
+              <Line>تاریخ شروع : {startDate}</Line>
+              <Line>تاریخ پایان : {endDate}</Line>
             </Box>
             <Box>
               <img src={like} alt="" />

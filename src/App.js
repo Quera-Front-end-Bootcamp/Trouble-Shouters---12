@@ -20,12 +20,12 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          
+
           <Route path={ROUTE_HOME_PAGE} element={<HomePage />} />
           <Route path={ROUTE_LOGIN_PAGE} element={<Login />} />
           <Route path={ROUTE_REGISTER_PAGE} element={<Register />} />
-          <Route path={ROUTE_PRODUCT_PAGE} element={<ProductPage/>}/>
-          <Route path={ROUTE_PRODUCTS_PAGE} element={<ProductsV2/>}/>
+          <Route path={ROUTE_PRODUCTS_PAGE} element={<ProductsV2 />}></Route>
+          <Route path={ROUTE_PRODUCT_PAGE} element={<ProductPage />} />
 
           <Route path={"*"} element={<NotFound />} />
         </Routes>
