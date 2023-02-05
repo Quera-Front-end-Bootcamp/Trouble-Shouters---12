@@ -25,6 +25,10 @@ const ModalContainer = styled.div`
   height: 63vh;
   width: 40vw;
   padding: 30px 40px;
+  @media (max-width: 480px) {
+    height: 70vh;
+    width: 80vw;
+  }
 `;
 const Flex = styled.div`
   display: flex;
@@ -71,6 +75,9 @@ const Pic = styled.div`
   img {
     width: 200px;
     height: 200px;
+  }
+  @media (max-width: 480px) {
+    display: none;
   }
 `;
 const Button = styled.div`

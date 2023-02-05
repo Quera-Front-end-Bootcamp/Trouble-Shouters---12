@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-import back from "../images/homePage/Details.png";
-import DetailIcon1 from "../images/homePage/DetailIicon1.png";
-import DetailIcon2 from "../images/homePage/DetailIicon2.png";
-import DetailIcon3 from "../images/homePage/DetailIicon3.png";
+import back from "../../images/homePage/Details.png";
+import DetailIcon1 from "../../images/homePage/DetailIicon1.png";
+import DetailIcon2 from "../../images/homePage/DetailIicon2.png";
+import DetailIcon3 from "../../images/homePage/DetailIicon3.png";
 
 const Container = styled.div`
   height: 100vh;
@@ -35,6 +35,7 @@ const Box = styled.div`
   @media (max-width: 480px) {
     flex-direction: column;
     width: 100%;
+    height: 33.3%;
   }
 `;
 const Icon = styled.div`

@@ -9,7 +9,7 @@ import Introduction from "../../components/Introduction/Introduction";
 
 import TrainingCourse from "../../components/Training Courses/Training Course/TrainingCourse";
 import TrainingCourses from "../../components/Training Courses/TrainingCourses";
-import DetailesMain from "../../components/DetailesMain";
+import DetailesMain from "../../components/DetailesMain/DetailesMain";
 
 
 function HomePage() {
