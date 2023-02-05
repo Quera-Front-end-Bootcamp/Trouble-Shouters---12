@@ -9,13 +9,15 @@ import Introduction from "../../components/Introduction/Introduction";
 
 import TrainingCourse from "../../components/Training Courses/Training Course/TrainingCourse";
 import TrainingCourses from "../../components/Training Courses/TrainingCourses";
+import DetailesMain from "../../components/DetailesMain";
 
 
 function HomePage() {
 
   return <>
   <Header/>
-  <Statistics/>
+  {/* <Statistics/> */}
+  <DetailesMain/>
   <CoursesComponent/>
   <Introduction/>
   <News />
