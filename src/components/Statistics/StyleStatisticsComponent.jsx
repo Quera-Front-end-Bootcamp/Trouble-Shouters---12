@@ -12,6 +12,7 @@ export const StatisticsBackground = styled.div`
 `;
 
 export const MainStatistics = styled.div`
+
   display: flex;
   justify-content: space-around;
   color: #fff;

@@ -8,6 +8,8 @@ export const SearchContainer = styled.div`
   opacity: 50%;
   display: flex;
   align-items: center;
+  position: absolute;
+  bottom: 0;
   a {
     color: white;
     text-decoration: none;
@@ -17,5 +19,8 @@ export const SearchContainer = styled.div`
   }
   i {
     margin-left: 10px;
+  }
+  .search-icon {
+    margin-top: 15px;
   }
 `;

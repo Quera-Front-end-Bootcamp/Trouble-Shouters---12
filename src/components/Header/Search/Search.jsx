@@ -8,7 +8,7 @@ function Search() {
       <a href="#">
         <i>
           {" "}
-          <AiOutlineSearch size={30} />
+          <AiOutlineSearch className="search-icon" size={25} />
         </i>
         جستجو ...
       </a>
