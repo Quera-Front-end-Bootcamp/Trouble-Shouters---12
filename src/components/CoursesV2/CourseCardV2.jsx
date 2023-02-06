@@ -44,7 +44,7 @@ const More = styled.button`
   background-color: var(--main-color);
   border: none;
   color: #fff;
-  padding: 2px 5px;
+  padding: 5px 8px;
   cursor: pointer;
 `;
 const Price = styled.div`

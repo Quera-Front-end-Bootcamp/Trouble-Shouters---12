@@ -15,8 +15,8 @@ import {
 
 import home from "../../images/loginPage/BlueHomeIcon.png";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { ROUTE_REGISTER_PAGE } from "../../Routes/Routes";
+import { Link, useNavigate } from "react-router-dom";
+import { ROUTE_HOME_PAGE, ROUTE_REGISTER_PAGE } from "../../Routes/Routes";
 import { ROUTE_LOGIN_PAGE } from "../../Routes/Routes";
 
 const prepareForm = (formArr) => {
@@ -46,7 +46,9 @@ const Form = ({
     <FormContainer>
       <FormHeadLine>
         <FormTitle>{title}</FormTitle>
-        <HomeIcon src={home} alt="home" />
+        <Link to={ROUTE_HOME_PAGE}>
+          <HomeIcon src={home} alt="home" />
+        </Link>
       </FormHeadLine>
       {formArr.map(({ placeholder, name, type }, index) => (
         <FormControl key={index}>
