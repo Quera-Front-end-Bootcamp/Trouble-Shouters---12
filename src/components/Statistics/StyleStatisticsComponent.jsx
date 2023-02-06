@@ -1,21 +1,17 @@
 import styled from "styled-components";
+import Banner from "../../images/homePage/Class.png";
 
 export const StatisticsBackground = styled.div`
-  background: black;
-  width: 100%;
+  background-image: url(${Banner});
   height: 99.5vh;
-  img {
-    opacity: 80%;
-    width: 100%;
-    height: 99.5vh;
-  }
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+
 `;
 
 export const MainStatistics = styled.div`
-  margin: 5px 0px;
-  position: absolute;
-  bottom: -100vh;
-  width: 100%;
   display: flex;
   justify-content: space-around;
   color: #fff;
@@ -25,11 +21,8 @@ export const MainStatistics = styled.div`
     align-items: center;
   }
   @media (max-height: 740px) {
-    height: 95%;
     padding: 5px;
     margin: 2px 0px;
-    position: absolute;
-    width: 100%;
   }
   div {
     bottom: 0px;
@@ -39,19 +32,16 @@ export const MainStatistics = styled.div`
     text-align: center;
     padding: 100px 28px;
     margin: 0px 1px;
-    gap: 30px;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    height: 40%;
     @media (max-width: 768px) {
       padding: 15px;
       margin: 2px 0px;
     }
     @media (max-height: 740px) {
-      gap: 10px;
-      padding: 0px;
+      padding: 20px;
       margin: 2px 0px;
     }
     img {
@@ -59,7 +49,7 @@ export const MainStatistics = styled.div`
       height: 60px;
       @media (max-height: 740px) {
         width: 40px;
-      height: 40px;
+        height: 40px;
       }
     }
     h2 {
@@ -77,3 +67,4 @@ export const MainStatistics = styled.div`
     }
   }
 `;
+
