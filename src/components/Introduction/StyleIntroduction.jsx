@@ -12,6 +12,7 @@ export const Consultation = styled.div`
   @media (max-width: 768px) {
     background-image: url(${BusinessPeopleRes});
     background-size: 100vw auto;
+    height: 15vh;
     flex-direction: row;
     align-items: center;
   }
@@ -26,7 +27,7 @@ export const Consultation = styled.div`
     opacity: 80%;
     @media (max-width: 768px) {
       width: 20vw;
-      height: 6vh;
+      height: 4vh;
       margin: 40px;
       position: relative;
     }
@@ -45,7 +46,7 @@ export const Consultation = styled.div`
     margin: 0% 3%;
     font-size: 1.5rem;
     @media (max-width: 768px) {
-      text-shadow: 2px 2px 4px #fff;
+      font-size: 1rem;
       padding: 5%;
       color: #000000;
     }
@@ -54,6 +55,7 @@ export const Consultation = styled.div`
       font-size: 1rem;
       font-weight: normal;
       @media (max-width: 768px) {
+        font-size: 0.8rem;
         font-weight: bold;
         color: #000;
       }
@@ -70,6 +72,7 @@ export const Certification = styled.div`
   @media (max-width: 768px) {
     background-image: url(${StudentManRes});
     background-size: 100vw auto;
+    height: 15vh;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
@@ -89,7 +92,7 @@ export const Certification = styled.div`
     margin: auto;
     font-size: 1.5rem;
     @media (max-width: 768px) {
-      text-shadow: 2px 2px 4px #fff;
+      font-size: 1rem;
       margin: 0px;
       padding: 5%;
       color: #000000;
@@ -99,6 +102,7 @@ export const Certification = styled.div`
       font-size: 1rem;
       font-weight: normal;
       @media (max-width: 768px) {
+        font-size: 0.8rem;
         font-weight: bold;
         color: #000;
       }
@@ -114,6 +118,7 @@ export const Assist = styled.div`
   justify-content: space-between;
   @media (max-width: 768px) {
     background-image: url(${BusinessModernClassRoomRes});
+    height: 15vh;
     background-size: 100vw auto;
     flex-direction: row;
     align-items: center;
@@ -148,7 +153,7 @@ export const Assist = styled.div`
     margin: 0% 3%;
     font-size: 1.5rem;
     @media (max-width: 768px) {
-      text-shadow: 2px 2px 4px #fff;
+      font-size: 1rem;
       padding: 5%;
       color: #000000;
     }
@@ -157,6 +162,7 @@ export const Assist = styled.div`
       font-size: 1rem;
       font-weight: normal;
       @media (max-width: 768px) {
+        font-size: 0.8rem;
         font-weight: bold;
         color: #000;
       }
