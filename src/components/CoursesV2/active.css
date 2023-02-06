@@ -1,0 +1,10 @@
+.active{
+  color: #fff !important;
+  background-color: var(--main-color) !important;
+}
+.show{
+  display: flex;
+}
+.close{
+  display: none !important;
+}

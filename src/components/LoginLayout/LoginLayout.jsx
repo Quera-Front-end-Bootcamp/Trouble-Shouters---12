@@ -14,6 +14,8 @@ import whatsApp from "../../images/loginPage/whatsapp.png";
 import telegram from "../../images/loginPage/telegram.png";
 import youtube from "../../images/loginPage/youtube.png";
 import insatgram from "../../images/loginPage/instagram.png";
+import { Link } from "react-router-dom";
+import {ROUTE_HOME_PAGE} from '../../Routes/Routes'
 
 const Layout = ({ imgUrl }) => {
   const socialIcon = [youtube, whatsApp, telegram, insatgram];
@@ -27,12 +29,14 @@ const Layout = ({ imgUrl }) => {
       </Headline>
       <Hr />
       <SocialIcons>
-        {socialIcon.map((icon) => (
-          <SocialIcon src={icon} alt={icon} />
+        {socialIcon.map((icon, index) => (
+          <SocialIcon src={icon} alt={icon} key={index} />
         ))}
       </SocialIcons>
       <SocialIcons />
-      <HomeIcon src={home} alt="home" />
+      <Link to={ROUTE_HOME_PAGE}>
+        <HomeIcon src={home} alt="home" />
+      </Link>
     </Container>
   );
 };

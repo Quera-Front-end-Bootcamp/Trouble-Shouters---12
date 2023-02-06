@@ -3,6 +3,8 @@ import React from "react";
 import Burger from "../Navbar/Burger/Burger";
 import Search from "./Search/Search";
 import { HeaderSite, Section, HeaderMain } from "./HeaderStyle";
+import { Link } from "react-router-dom";
+import {ROUTE_PRODUCTS_PAGE} from '../../Routes/Routes'
 
 const Header = () => {
   return (
@@ -22,7 +24,8 @@ const Header = () => {
                 <p>ایجاد شده و امید داریم بتوانیم با راهکار های نوین ، فرصتی</p>
                 <p>برای افراد خواهان پیشرفت فراهم کنیم .</p>
               </div>
-              <button> مشاهده دوره ها</button>
+              
+              <button ><Link className="linkButton" to={ROUTE_PRODUCTS_PAGE}> مشاهده دوره ها</Link></button>
             </div>
           </Section>
         </HeaderSite>
