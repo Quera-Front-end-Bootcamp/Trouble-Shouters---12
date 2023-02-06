@@ -27,9 +27,11 @@ export const UL = styled.ul`
     text-decoration: none;
     color: #fff;
   }
+  .buttons-mobile {
+    display: none;
+  }
   @media (max-width: 768px) {
-    display: ${(props) =>
-      props.open ? "block" : "none"};
+    display: ${(props) => (props.open ? "block" : "none")};
     margin: 0;
     flex-direction: column;
     background: #004458;
@@ -44,10 +46,30 @@ export const UL = styled.ul`
     padding-top: 3.5rem;
     li {
       color: #fff;
+      
     }
-  }
-  @media (max-width: 576px){
-    /* display: none; */
+    .buttons-mobile {
+      display: block;
+    }
+    .enter-mobile {
+      padding: 10px 5px;
+      width: 80px;
+      height: 40px;
+      margin: 15px 29px;
+      /* display: flex;
+      align-items: center;
+      justify-content: center; */
+    }
+    .active-mobile {
+      padding: 10px 5px;
+      background-color: #12775E;
+      width: 110px;
+      height: 50px;
+      margin: 30px 29px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 `;
 export const Div = styled.div`
@@ -82,7 +104,7 @@ export const Border = styled.div`
   width: 96%;
   margin: -35px auto;
   opacity: 0.7;
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     display: none;
   }
 `;

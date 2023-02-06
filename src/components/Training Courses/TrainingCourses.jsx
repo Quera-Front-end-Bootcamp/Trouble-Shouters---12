@@ -9,19 +9,19 @@ const TrainingCourses = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(8);
   const [active, setActive] = useState({
-    A: true,
-    B: false,
-    C: false,
-    D: false,
+    All: true,
+    news: false,
+    expensive: false,
+    Done: false,
   });
 
   const allCourseHandeler = () => {
     setData(CoursesApi);
     setActive({
-      A: true,
-      B: false,
-      C: false,
-      D: false,
+      All: true,
+      news: false,
+      expensive: false,
+      Done: false,
     });
   };
   const expensiveHandeler = () => {
@@ -29,10 +29,10 @@ const TrainingCourses = () => {
 
     setData(result);
     setActive({
-      A: false,
-      B: false,
-      C: true,
-      D: false,
+      All: false,
+      news: false,
+      expensive: true,
+      Done: false,
     });
   };
 
@@ -41,10 +41,10 @@ const TrainingCourses = () => {
 
     setData(result);
     setActive({
-      A: false,
-      B: true,
-      C: false,
-      D: false,
+      All: false,
+      news: true,
+      expensive: false,
+      Done: false,
     });
   };
 
@@ -53,10 +53,10 @@ const TrainingCourses = () => {
 
     setData(result);
     setActive({
-      A: false,
-      B: false,
-      C: false,
-      D: true,
+      All: false,
+      news: false,
+      expensive: false,
+      Done: true,
     });
   };
 
@@ -95,25 +95,25 @@ const TrainingCourses = () => {
           <h2>دوره های آموزشی</h2>
           <div className="filter-course">
             <button
-              className={active.A === true ? "active" : ""}
+              className={active.All === true ? "active" : ""}
               onClick={() => allCourseHandeler()}
             >
               همه دوره ها
             </button>
             <button
-              className={active.B === true ? "active" : ""}
+              className={active.news === true ? "active" : ""}
               onClick={() => newsestHandeler()}
             >
               جدیدترین ها
             </button>
             <button
-              className={active.C === true ? "active" : ""}
+              className={active.expensive === true ? "active" : ""}
               onClick={() => expensiveHandeler()}
             >
               گران ترین ها
             </button>
             <button
-              className={active.D === true ? "active" : ""}
+              className={active.Done === true ? "active" : ""}
               onClick={() => doneHandeler()}
             >
               تکمیل نشده{" "}

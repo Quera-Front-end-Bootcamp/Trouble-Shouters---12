@@ -7,11 +7,11 @@ import TrainingCourses from "../../components/Training Courses/TrainingCourses";
 
 function HomePage() {
   return <>
-  {/* <Header/> */}
+  <Header/>
   {/* <CoursesComponent/>
   <FooterComponents/> */}
   {/* <TrainingCourse/> */}
-  <TrainingCourses/>
+  {/* <TrainingCourses/> */}
   </>;
 }
 

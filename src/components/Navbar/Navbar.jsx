@@ -22,7 +22,12 @@ const Navbar = ({ open }) => {
               {" "}
               <a href="#">{menu}</a>
             </li>
+            
           ))}
+           <div className="buttons-mobile">
+            <a className="enter-mobile">ورود</a>
+            <a className="active-mobile">ثبت نام</a>
+          </div>
         </UL>
 
         <Div>
