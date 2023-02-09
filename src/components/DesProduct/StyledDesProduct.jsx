@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import headerImg from "../../images/ProductPage/back.png";
-import js from "../../images/ProductPage/js.png";
-import teacher from "../../images/ProductPage/teacher.png";
-import like from "../../images/ProductPage/like.png";
-import calendar from "../../images/ProductPage/calendar.png";
+// import js from "../../images/ProductPage/js.png";
+// import teacher from "../../images/ProductPage/teacher.png";
+// import like from "../../images/ProductPage/like.png";
+// import calendar from "../../images/ProductPage/calendar.png";
 
 export const HeaderMain = styled.header`
   background-image: url(${headerImg});
@@ -123,8 +123,15 @@ export const Box = styled.div`
 export const BoxLogo = styled.div``;
 export const Line = styled.div`
   margin-top: 7px;
+  display: flex;
+  gap: .4rem;
   @media (max-width: 480px) {
     margin-top: 3px;
     font-size: 12px;
+  }
+  img{
+    height: 25px;
+    width: 25px;
+    margin-top: 10px;
   }
 `;

@@ -1,7 +1,6 @@
 import {Container,RightDet,RightDetTitle,RightDetDec,LeftDet,LeftDetTitle,LeftDetPrice,LeftDetDiscount,LeftDetTotal,LeftDetTimer,LeftDetButton,Lines,Title,TitleCross,} from './StyledProductDetails'
 
-
-const ProductDetails = () => {
+const ProductDetails = ({name,price,percent}) => {
   return (
     <>
       <Container>
@@ -30,16 +29,16 @@ const ProductDetails = () => {
           </RightDetDec>
         </RightDet>
         <LeftDet>
-          <LeftDetTitle>دوره جاوا اسکریپت</LeftDetTitle>
+          <LeftDetTitle> {name}</LeftDetTitle>
           <LeftDetPrice>
             <Title> قیمت دوره:</Title>
-            <TitleCross>200.000 تومان </TitleCross>
+            <TitleCross>{price} تومان </TitleCross>
           </LeftDetPrice>
           <LeftDetDiscount>
-            <Title> تخفیف:</Title>10 %
+            <Title> تخفیف:</Title>{percent} %
           </LeftDetDiscount>
           <LeftDetTotal>
-            <Title> مبلغ قابل پرداخت:</Title>180.000 تومان
+            <Title> مبلغ قابل پرداخت:</Title>{(+price*(100-(+percent))/100)} تومان
           </LeftDetTotal>
           <LeftDetTimer></LeftDetTimer>
           <LeftDetButton>ثبت نام در دوره</LeftDetButton>

@@ -24,8 +24,8 @@ const ProductPage = () => {
 
   return (
     <>
-    <DesProduct percent={data.percent*10} endDate={data.endDate} startDate={data.startDate} name={data.name} teacher={data.teacher}/>
-    <ProductDetails/>
+    <DesProduct star={+data.percent>5 ? +data.percent-5:+data.percent} percent={data.percent*10} endDate={data.endDate} startDate={data.startDate} name={data.name} teacher={data.teacher}/>
+    <ProductDetails percent={data.percent} name={data.name} price={data.Price}/>
     <Benefits/>
     <FooterComponents/>
     </>

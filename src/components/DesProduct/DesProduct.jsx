@@ -1,13 +1,27 @@
 import Burger from "../Navbar/Burger/Burger";
-import {HeaderMain,Container,Details,Logo,Title,Numbers,All,Number,ProgressBar,Progresser,Boxes,Box,BoxLogo,Line} from './StyledDesProduct'
+import {
+  HeaderMain,
+  Container,
+  Details,
+  Logo,
+  Title,
+  Numbers,
+  All,
+  Number,
+  ProgressBar,
+  Progresser,
+  Boxes,
+  Box,
+  BoxLogo,
+  Line,
+} from "./StyledDesProduct";
 import js from "../../images/ProductPage/js.png";
 import calendar from "../../images/ProductPage/calendar.png";
 import like from "../../images/ProductPage/like.png";
 import teachere from "../../images/ProductPage/teacher.png";
+import star from "../../images/ProductPage/star.png";
 
-
-
-const DesProduct = ({name,teacher,startDate,endDate,percent}) => {
+const DesProduct = ({ name, teacher, startDate, endDate, percent }) => {
   return (
     <>
       <HeaderMain>
@@ -38,7 +52,11 @@ const DesProduct = ({name,teacher,startDate,endDate,percent}) => {
             <Box>
               <img src={like} alt="" />
               <Line>رتبه :</Line>
-              <Line>12</Line>
+              <Line>
+                <img src={star} alt="" />
+                <img src={star} alt="" />
+                <img src={star} alt="" />
+              </Line>
             </Box>
           </Boxes>
         </Container>

@@ -2,43 +2,10 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import CoursesListV2 from "./CoursesListV2";
 import Pagination from "./Pagination";
-import styled from "styled-components";
 import HeaderCourse from "./HeaderCourse";
 import "./active.css";
+import {Container,Title,TitleContainer,Filter} from './StyledCourseV2'
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #e9e9e9;
-  padding: 0 10rem;
-  padding-bottom: 4rem;
-  @media (max-width: 480px) {
-    padding: 0 1rem;
-    padding-bottom: 2rem;
-  }
-`;
-const Title = styled.div`
-  font-size: 30px;
-  color: var(--main-color);
-`;
-const TitleContainer = styled.h1`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 3rem 2rem;
-  @media (max-width: 480px) {
-    padding: 3rem 0;
-    flex-direction: column;
-  }
-`;
-const Filter = styled.button`
-  border: none;
-  color: var(--main-color);
-  background-color: #e9e9e9;
-  padding: 8px 10px;
-  cursor: pointer;
-`;
 
 const CoursesV2 = () => {
   const [coinsData, setCoinsData] = useState([]);
