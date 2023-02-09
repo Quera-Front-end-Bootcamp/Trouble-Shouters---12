@@ -53,10 +53,10 @@ const CoursesV2 = () => {
   };
 
   const prevPage = () => {
-    if (currentPage >= totalPosts / postsPerPage) {
+    if (currentPage ==1) {
       setCurrentPage(1);
     } else {
-      setCurrentPage(totalPosts / postsPerPage);
+      setCurrentPage(currentPage - 1);
     }
   };
   return (

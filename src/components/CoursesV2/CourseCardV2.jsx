@@ -11,6 +11,9 @@ const Container = styled.div`
   min-width: 14vw;
   background-color: #fff;
   color: var(--main-color);
+  @media (max-width: 480px) {
+    width: 75%;
+  }
 `;
 const Title = styled.div`
   text-align: start;
