@@ -10,10 +10,10 @@ const Container = styled.div`
   /* align-items: center; */
 `;
 
-const CoursesListV2 = ({ coinsData }) => {
+const CoursesListV2 = ({ data }) => {
   return (
     <Container>
-      {coinsData.map((coin, index) => {
+      {data.map((coin, index) => {
         return (
           <CourseCardV2
             key={index}
