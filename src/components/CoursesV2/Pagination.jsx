@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import './active.css'
+import "./active.css";
 
 const Container = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 4rem;
-gap: .5rem;
-  button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 0.5rem;
+  button {
     border: none;
     padding: 10px 10px;
     color: var(--main-color);
@@ -18,15 +18,23 @@ const Pagination = ({
   postsPerPage,
   setCurrentPage,
   currentPage,
+  prevPage,
+  nextPage,
 }) => {
   let pages = [];
-
-  for (let i = Math.ceil(totalPosts / postsPerPage); i >=1 ; i--) {
+  let current = currentPage;
+  for (let i = Math.ceil(totalPosts / postsPerPage); i >= 1; i--) {
     pages.push(i);
   }
-
+  console.log();
   return (
     <Container>
+      <button
+        onClick={(e) => nextPage()}
+        // className={page == currentPage ? "active" : ""}
+      >
+        &#60;
+      </button>
       {pages.map((page, index) => {
         return (
           <button
@@ -38,6 +46,12 @@ const Pagination = ({
           </button>
         );
       })}
+      <button
+        onClick={(e) => prevPage()}
+        // className={page == currentPage ? "active" : ""}
+      >
+        &#62;
+      </button>
     </Container>
   );
 };

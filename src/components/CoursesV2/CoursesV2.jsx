@@ -4,8 +4,7 @@ import CoursesListV2 from "./CoursesListV2";
 import Pagination from "./Pagination";
 import HeaderCourse from "./HeaderCourse";
 import "./active.css";
-import {Container,Title,TitleContainer,Filter} from './StyledCourseV2'
-
+import { Container, Title, TitleContainer, Filter } from "./StyledCourseV2";
 
 const CoursesV2 = () => {
   const [coinsData, setCoinsData] = useState([]);
@@ -13,6 +12,7 @@ const CoursesV2 = () => {
   const [postsPerPage, setPostsPerPage] = useState(10);
   const [isActive, setActive] = useState(1);
 
+  
   useEffect(() => {
     axios
       .get("https://63ba74b04482143a3f27f44a.mockapi.io/users")
@@ -26,6 +26,8 @@ const CoursesV2 = () => {
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPosts = coinsData.slice(firstPostIndex, lastPostIndex);
+  const totalPosts = coinsData.length;
+
   const allHandler = () => {
     const copy = [...coinsData].sort((a, b) => a.id - b.id);
     setCoinsData(copy);
@@ -41,6 +43,21 @@ const CoursesV2 = () => {
     setCoinsData(copy);
     setActive(3);
     // console.log(coinsData);
+  };
+  const nextPage = () => {
+    if (currentPage >= totalPosts / postsPerPage) {
+      setCurrentPage(1);
+    } else {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const prevPage = () => {
+    if (currentPage >= totalPosts / postsPerPage) {
+      setCurrentPage(1);
+    } else {
+      setCurrentPage(totalPosts / postsPerPage);
+    }
   };
   return (
     <>
@@ -76,6 +93,8 @@ const CoursesV2 = () => {
           postsPerPage={postsPerPage}
           setCurrentPage={setCurrentPage}
           currentPage={currentPage}
+          nextPage={nextPage}
+          prevPage={prevPage}
         />
       </Container>
     </>
