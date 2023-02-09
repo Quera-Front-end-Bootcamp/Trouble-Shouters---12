@@ -127,7 +127,9 @@ export const ContainerMobile = styled.div`
     display: flex;
   }
 `;
-export const RightContainerMobile = styled.div``;
+export const RightContainerMobile = styled.div`
+margin-bottom: 50px;
+`;
 export const RightBoxMobile = styled.div``;
 export const Box = styled.div`
   display: flex;

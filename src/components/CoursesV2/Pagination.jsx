@@ -33,6 +33,7 @@ const Pagination = ({
     <Container>
       <button
         onClick={() => prevPage()}
+        className='active'
       >
         &#62;
       </button>
@@ -49,6 +50,8 @@ const Pagination = ({
       })}
       <button
         onClick={() => nextPage()}
+        className='active'
+
       >
         &#60;
       </button>

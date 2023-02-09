@@ -4,7 +4,7 @@ import jsPic from "../../images/homePage/js.png";
 import cPic from "../../images/homePage/c.png";
 import javaPic from "../../images/homePage/java.png";
 import bootstrapPic from "../../images/homePage/bootstrap.png";
-import {ROUTE_PRODUCTS_PAGE} from '../../Routes/Routes'
+import { ROUTE_PRODUCTS_PAGE } from "../../Routes/Routes";
 
 import {
   Container,
@@ -66,6 +66,15 @@ const CoursesComponent = () => {
       </Container>
 
       <ContainerMobile>
+        <LeftContainerMobile>
+          <LeftTitleMobile>دوره های آموزشی</LeftTitleMobile>
+          <LeftDecMobile>
+            دسترسی به با کیفیت ترین دوره های آموزشی آنلاین با تدریس برترین
+            اساتید ایران در دسته بندی های ، گوناگونی همچون طراحی ، برنامه نویسی
+            ، اقتصاد ... فلسفه ، فیزیک ، شیمی ، ریاضی ، هنر و
+          </LeftDecMobile>
+          <LeftButtonMobile>مشاهده دوره ها</LeftButtonMobile>
+        </LeftContainerMobile>
         <RightContainerMobile>
           <RightBoxMobile>
             <Box inputColor="#f7df1e">
@@ -84,15 +93,6 @@ const CoursesComponent = () => {
             </Box>
           </RightBoxMobile>
         </RightContainerMobile>
-        <LeftContainerMobile>
-          <LeftTitleMobile>دوره های آموزشی</LeftTitleMobile>
-          <LeftDecMobile>
-            دسترسی به با کیفیت ترین دوره های آموزشی آنلاین با تدریس برترین
-            اساتید ایران در دسته بندی های ، گوناگونی همچون طراحی ، برنامه نویسی
-            ، اقتصاد ... فلسفه ، فیزیک ، شیمی ، ریاضی ، هنر و
-          </LeftDecMobile>
-          <LeftButtonMobile>مشاهده دوره ها</LeftButtonMobile>
-        </LeftContainerMobile>
       </ContainerMobile>
     </>
   );
